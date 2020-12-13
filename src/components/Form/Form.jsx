@@ -81,7 +81,7 @@ const Form = ({currentId, setCurrentId}) => {
                     fullWidth 
                     label="Tags" 
                     name="tags"
-                    onChange={(event) => setPostData({...postData, tags: event.target.value})} 
+                    onChange={(event) => setPostData({...postData, tags: event.target.value.split(",")})} 
                     value={postData.tags}
                     variant="outlined" 
                 />

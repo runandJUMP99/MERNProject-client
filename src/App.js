@@ -26,14 +26,16 @@ function App() {
         <img className={classes.image} src={memories} alt="Memories" height="60" />
       </AppBar>
       <Grow in>
-        <Grid alignItems="stretch" container justify="space-between" spacing={3}>
-          <Grid item sm={7} xs={12}>
-            <Posts setCurrentId={setCurrentId} />
+        <Container>
+          <Grid alignItems="stretch" className={classes.mainContainer} container justify="space-between" spacing={3}>
+            <Grid item sm={7} xs={12}>
+              <Posts setCurrentId={setCurrentId} />
+            </Grid>
+            <Grid item sm={4} xs={12}>
+              <Form currentId={currentId} setCurrentId={setCurrentId} />
+            </Grid>
           </Grid>
-          <Grid item sm={4} xs={12}>
-            <Form currentId={currentId} setCurrentId={setCurrentId} />
-          </Grid>
-        </Grid>
+        </Container>
       </Grow>
     </Container>
   );
